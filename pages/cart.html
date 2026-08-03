@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Корзина покупок Flowerium — проверьте состав заказа перед оформлением.">
+  <title>Корзина — Flowerium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header" data-header>
+    <a class="logo" href="../index.html"><span>✿</span>Flowerium</a>
+    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span></button>
+    <nav class="main-nav" data-nav>
+      <a href="../index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="delivery.html">Доставка</a>
+      <a href="about.html">О нас</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <a class="header-phone" href="tel:+79990000000">+7 999 000-00-00</a>
+    <a class="cart-icon" href="cart.html" aria-label="Корзина">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+      </svg>
+      <span class="cart-count" data-cart-count>0</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Корзина</p>
+      <h1>Ваш заказ</h1>
+      <p>Проверьте состав букетов и переходите к оформлению доставки.</p>
+    </section>
+
+    <section class="section cart-layout">
+      <div class="cart-items" id="cart-items">
+        <!-- Товары добавляются через JS -->
+        <div class="cart-empty">
+          <img src="../assets/img/empty-cart.svg" alt="Корзина пуста" onerror="this.style.display='none'">
+          <h2>Корзина пуста</h2>
+          <p>Выберите букеты в каталоге, чтобы оформить заказ.</p>
+          <a class="button button--primary" href="catalog.html">Перейти в каталог</a>
+        </div>
+      </div>
+
+      <aside class="cart-summary">
+        <h2>Итого</h2>
+        <div class="cart-summary__row">
+          <span>Товары</span>
+          <strong data-cart-subtotal>0 ₽</strong>
+        </div>
+        <div class="cart-summary__row">
+          <span>Доставка</span>
+          <strong data-cart-delivery>390 ₽</strong>
+        </div>
+        <div class="cart-summary__total">
+          <span>К оплате</span>
+          <strong data-cart-total>0 ₽</strong>
+        </div>
+        <a class="button button--primary" href="checkout.html" style="width: 100%; margin-top: 16px;">Оформить заказ</a>
+        <p class="cart-summary__note">Нажимая кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
+      </aside>
+    </section>
+
+    <section class="section section--tint">
+      <div class="section__head">
+        <p class="eyebrow">Преимущества</p>
+        <h2>Почему выбирают Flowerium</h2>
+      </div>
+      <div class="info-grid">
+        <article>
+          <h3>Свежие цветы</h3>
+          <p>Поставки каждые 2–3 дня от проверенных поставщиков Крыма и Краснодарского края.</p>
+        </article>
+        <article>
+          <h3>Фото перед отправкой</h3>
+          <p>Отправим фото готового букета в WhatsApp или Telegram перед доставкой.</p>
+        </article>
+        <article>
+          <h3>Гарантия свежести</h3>
+          <p>Если букет завянет раньше 3 дней — заменим бесплатно или вернём деньги.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><a class="logo" href="../index.html"><span>✿</span>Flowerium</a><p>Цветы, букеты и подарки с доставкой по Крыму.</p></div>
+    <div><h3>Навигация</h3><a href="catalog.html">Каталог</a><a href="delivery.html">Доставка и оплата</a><a href="about.html">О нас</a><a href="contacts.html">Контакты</a></div>
+    <div><h3>Документы</h3><a href="privacy.html">Политика конфиденциальности</a><a href="offer.html">Публичная оферта</a><a href="consent.html">Обработка ПДн</a></div>
+    <div><h3>Связь</h3><a href="tel:+79990000000">+7 999 000-00-00</a><a href="mailto:hello@flowerium.example">hello@flowerium.example</a></div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/cart.js"></script>
+</body>
+</html>
