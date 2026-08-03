@@ -1,0 +1,344 @@
+/*
+Theme Name: Flowerium Theme (Fixed)
+Theme URI: https://flowerium.crimea
+Author: Flowerium Team
+Author URI: https://flowerium.crimea
+Description: Исправленная версия темы для сети цветочных магазинов. Полная совместимость с WordPress и WooCommerce на основе существующего HTML-макета.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: flowerium-theme
+Tags: e-commerce, woocommerce, responsive, blog, custom-menu
+
+Flowerium Theme - Copyright (C) 2024 Flowerium
+Licensed under GPL v2 or later
+*/
+
+/* Import existing styles from the original project */
+@import url("assets/css/styles.css");
+
+/* WordPress-specific overrides and additions */
+
+/* Admin bar spacing */
+.admin-bar .site-header {
+    top: 32px;
+}
+
+@media (max-width: 782px) {
+    .admin-bar .site-header {
+        top: 46px;
+    }
+}
+
+/* WordPress core classes integration */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid var(--border);
+    max-width: 96%;
+    padding: 5px 3px 10px;
+    text-align: center;
+    border-radius: var(--radius);
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+    color: var(--muted);
+}
+
+/* Screen reader text */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+}
+
+/* Skip link */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    left: 6px;
+    top: 7px;
+    z-index: 999999;
+}
+
+/* Sticky posts */
+.sticky {
+    border: 2px solid var(--brand);
+}
+
+/* Gallery */
+.gallery {
+    margin-bottom: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.gallery-item {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+}
+
+.gallery-caption {
+    display: block;
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: 16px 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: var(--brand-dark);
+    font-weight: 700;
+}
+
+/* Pagination */
+.pagination, .wp-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 32px 0;
+}
+
+.pagination a,
+.pagination span,
+.wp-pagination a,
+.wp-pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 42px;
+    padding: 0 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    color: var(--text);
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.pagination a:hover,
+.wp-pagination a:hover {
+    background: var(--brand);
+    color: white;
+    border-color: var(--brand);
+}
+
+.pagination .current,
+.wp-pagination .current {
+    background: var(--brand);
+    color: white;
+    border-color: var(--brand);
+}
+
+/* Comments */
+.comments-area {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment {
+    padding: 20px;
+    background: rgba(255,255,255,.84);
+    border: 1px solid rgba(241, 216, 221, .9);
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+}
+
+.comment-author {
+    font-weight: 800;
+    color: var(--brand-dark);
+}
+
+.comment-meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.comment-reply-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.comment-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Widgets */
+.widget {
+    margin-bottom: 24px;
+    padding: 20px;
+    background: rgba(255,255,255,.84);
+    border: 1px solid rgba(241, 216, 221, .9);
+    border-radius: var(--radius);
+}
+
+.widget-title {
+    font-size: 1.15rem;
+    color: var(--brand-dark);
+    margin-bottom: 16px;
+}
+
+.widget ul {
+    list-style: none;
+    padding: 0;
+}
+
+.widget li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.widget li:last-child {
+    border-bottom: none;
+}
+
+/* Search form */
+.search-form {
+    display: flex;
+    gap: 12px;
+}
+
+.search-form label {
+    flex: 1;
+    margin: 0;
+}
+
+.search-form .search-field {
+    width: 100%;
+}
+
+/* Entry meta */
+.entry-meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 12px 0;
+}
+
+.entry-meta time,
+.entry-meta span {
+    margin-right: 16px;
+}
+
+/* Entry tags */
+.entry-tags {
+    color: var(--muted);
+}
+
+.entry-tags a {
+    color: var(--brand-dark);
+    font-weight: 700;
+}
