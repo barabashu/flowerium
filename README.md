@@ -11,6 +11,7 @@
 - Рабочий адаптивный HTML/CSS/JS-сайт: `index.html`, `pages/catalog.html`, `pages/delivery.html`, `pages/about.html`, `pages/contacts.html`.
 - [Структура многостраничного сайта](docs/site-structure.md)
 - [Техническое задание для WordPress](docs/wordpress-brief.md)
+- [Установка готовой WordPress-темы](docs/wordpress-theme-install.md)
 - [Чеклист интеграций для России](docs/russia-integrations-checklist.md)
 - [План миграции домена и запуска](docs/domain-migration-launch-plan.md)
 - [Контентная модель каталога и страниц](docs/content-model.md)
@@ -41,3 +42,15 @@ python3 -m http.server 4173
 ```
 
 После запуска откройте `http://localhost:4173/`. Сайт не требует сборки и может использоваться как статический прототип, HTML-референс для WordPress-темы или основа для дальнейшей интеграции.
+
+
+## WordPress-тема
+
+Готовая тема находится в `wordpress-theme/flowerium`. Для установки в WordPress упакуйте именно папку темы:
+
+```bash
+cd wordpress-theme
+zip -r flowerium.zip flowerium
+```
+
+Загружайте полученный `flowerium.zip` через «Внешний вид» → «Темы» → «Добавить новую» → «Загрузить тему».

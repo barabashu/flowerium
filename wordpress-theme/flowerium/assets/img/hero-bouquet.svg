@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-label="Букет">
+  <rect width="520" height="520" rx="80" fill="#fff0ec"/>
+  <g transform="translate(260 245)">
+    <path d="M-80 80 0 230 80 80Z" fill="#f0c6a5"/>
+    <path d="M-55 105 0 215 55 105Z" fill="#e6a982"/>
+    <g fill="none" stroke="#3f8d73" stroke-width="8" stroke-linecap="round"><path d="M0 90V-70"/><path d="M0 60-70-45"/><path d="M0 55 68-50"/><path d="M-18 80-118 0"/><path d="M18 80 118 0"/></g>
+    <g><circle cx="0" cy="-88" r="52" fill="#d94f7b"/><circle cx="-65" cy="-54" r="48" fill="#ff8fb0"/><circle cx="67" cy="-58" r="48" fill="#f56f9a"/><circle cx="-112" cy="4" r="42" fill="#ffd166"/><circle cx="112" cy="0" r="42" fill="#ffafcc"/><circle cx="-28" cy="-8" r="50" fill="#ffffff"/><circle cx="32" cy="-8" r="50" fill="#ffe1ea"/></g>
+  </g>
+</svg>
